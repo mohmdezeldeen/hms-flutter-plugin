@@ -34,6 +34,12 @@ import com.huawei.hms.flutter.push.hms.PluginContext;
 import com.huawei.hms.flutter.push.utils.RemoteMessageUtils;
 import com.huawei.hms.push.RemoteMessage;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.dart.DartExecutor;
 import io.flutter.embedding.engine.dart.DartExecutor.DartCallback;
@@ -44,12 +50,6 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.view.FlutterCallbackInformation;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class FlutterBackgroundRunner implements MethodCallHandler {
     private static final String TAG = FlutterBackgroundRunner.class.getSimpleName();
